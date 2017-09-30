@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "Laniakea",
+    "description": "Laniakea displays new space themed photo on every new tab",
+    "version": "1.0",
+
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+
+    "options_ui": {
+        "page": "settings.html",
+        "chrome_style": true
+    },
+
+    "browser_action": {
+        "default_icon": "images/laniakea16.png"
+    },
+
+	"icons": {
+		"16": "images/laniakea16.png",
+		"128": "images/laniakea128.png"
+	},
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}
