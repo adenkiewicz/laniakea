@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Laniakea",
-    "description": "Laniakea displays new space themed photo on every new tab",
+    "description": "Chrome plugin that replaces default New Tab page with random Flickr picture (based on defined search criteria (tags))",
     "version": "1.0",
 
     "permissions": [
@@ -16,13 +16,14 @@
     },
 
     "browser_action": {
-        "default_icon": "images/laniakea16.png"
+        "default_icon": "images/laniakea16.png",
+        "default_popup": "settings.html"
     },
 
-	"icons": {
-		"16": "images/laniakea16.png",
-		"128": "images/laniakea128.png"
-	},
+    "icons": {
+        "16": "images/laniakea16.png",
+        "128": "images/laniakea128.png"
+    },
 
     "chrome_url_overrides": {
         "newtab": "index.html"

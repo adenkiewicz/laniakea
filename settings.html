@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Laniakea options</title>
+    <head>
+        <meta charset="utf-8">
+        <title>Laniakea options</title>
         <link rel="stylesheet" type="text/css" href="/css/tether.css">
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-		<style>
+        <style>
 body { 
-	width: 600px;
-	padding: 50px;
+    width: 600px;
+    padding: 50px;
 }
 #status {
-	display: none;
+    display: none;
 }
-</style>
-	</head>
-	<body>
-		<div class="container">
-			<form>
-				<div class="form-group row">
-					<label for="api_key" class="col-4 col-form-label">Flickr API key</label>
-					<div class="col-8">
-						<input type="text" class="form-control" id="api_key" aria-describedby="api_key_help">
-						<small id="api_key_kelp" class="form-text text-muted">Key can be obtained from <a href="https://www.flickr.com/services/api/misc.api_keys.html">https://www.flickr.com/services/api/misc.api_keys.html</a></small>
-					</div>
-				</div>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="form-group row">
+                    <label for="api_key" class="col-4 col-form-label">Flickr API key</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="api_key" aria-describedby="api_key_help">
+                        <small id="api_key_kelp" class="form-text text-muted">Key can be obtained from <a href="https://www.flickr.com/services/api/misc.api_keys.html">https://www.flickr.com/services/api/misc.api_keys.html</a></small>
+                    </div>
+                </div>
 
-				<div class="form-group row">
-					<label for="tags" class="col-4 col-form-label">Flickr tags</label>
-					<div class="col-8">
-						<input type="text" class="form-control" id="tags" placeholder="spacex,space" aria-describedby="tags_help">
-						<small id="tags_kelp" class="form-text text-muted">Separate multiple tags with comma</small>
-					</div>
-				</div>
+                <div class="form-group row">
+                    <label for="tags" class="col-4 col-form-label">Flickr tags</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="tags" placeholder="spacex,space" aria-describedby="tags_help">
+                        <small id="tags_kelp" class="form-text text-muted">Separate multiple tags with comma</small>
+                    </div>
+                </div>
 
-				<fieldset class="form-group">
-					<legend>How to interprete multiple tags?</legend>
-					<div class="col-sm-10">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="radio" name="logic" value="all" checked>
-								ALL &mdash; image must have all selected tags
-							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="radio" name="logic" value="any">
-								ANY &mdash; image must have any of selected tags
-							</label>
-						</div>
-					</div>
-				</fieldset>
-				<button class="btn" id="save" action="#">Save</button>
-				<div id="status">Settings were saved</div>
-			</form>
-		</div>
-			<footer class="fixed-bottom">Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></footer>
-		<script src="/js/jquery-3.2.1.min.js"></script>
-		<script src="/js/tether.js"></script>
-		<script src="/js/bootstrap.js"></script>
-		<script src="/js/settings.js"></script>
-	</body>
+                <fieldset class="form-group">
+                    <legend>How to interpret multiple tags?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" name="logic" value="all" checked>
+                                ALL &mdash; image must have all selected tags
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" name="logic" value="any">
+                                ANY &mdash; image must have any of selected tags
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <button class="btn" id="save" action="#">Save</button>
+                <div id="status">Settings were saved</div>
+            </form>
+        </div>
+        <div class="form-group">&nbsp;</div>
+        <footer class="fixed-bottom">
+            Extension code be found here: <a href="https://github.com/adenkiewicz/laniakea" title="github">https://github.com/adenkiewicz/laniakea</a><br>
+            Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </footer>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/tether.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/settings.js"></script>
+    </body>
 </html>

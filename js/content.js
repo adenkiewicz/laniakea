@@ -20,15 +20,15 @@ function parseResponse(data) {
     let URLtemplate = "https://farm{0}.staticflickr.com/{1}/{2}_{3}_b.jpg";
     let TagTemplate = "https://www.flickr.com/photos/tags/{0}/";
 
-	if (data.stat != 'ok') {
-		showAlert(data, data.stat, data.message);
-		return;
-	}
+    if (data.stat != 'ok') {
+        showAlert(data, data.stat, data.message);
+        return;
+    }
 
-	if (data.photos.photo.length == 0) {
-		showAlert(data, "No photos found -- too strict criteria?", "");
-		return;
-	}
+    if (data.photos.photo.length == 0) {
+        showAlert(data, "No photos found -- too strict criteria?", "");
+        return;
+    }
 
     let photo = data.photos.photo[getRandom(data.photos.photo.length)];
 
@@ -42,7 +42,7 @@ function parseResponse(data) {
     let tags = photo.tags.split(' ');
     tags.forEach(function(tag) {
         let link = $("<a>")
-            
+
         link.attr('href', TagTemplate.format(tag));
         link.text('#' + tag);
 
@@ -88,35 +88,35 @@ function showAlert(req, status, ex) {
 }
 
 $(function() {
-	chrome.storage.local.get(
-	{
-		api_key: '',
-		tags: 'cosmos,space',
-		logic: 'all'
-	},
-		function(settings) {
-			$.ajax({
-				url: "https://api.flickr.com/services/rest/",
-				data: { 
-					api_key: settings.api_key,
-					method: "flickr.photos.search",
-					tags: settings.tags,
-					tag_mode: settings.logic,
-					privacy_filter: 1, // public photos only
-					content_type: 1, // photos only
-					media: "photos", // photos only
-					per_page: 50,
-					page: getRandom(100),
-					extras: "description, date_taken, owner_name, geo, tags, url_o",
-					format: "json",
-					nojsoncallback: 1
-				},
-				dataType: "json",
-				success: parseResponse,
-				timeout: showAlert,
-				fail: showAlert,
-				error: showAlert
-			});
-		});
+    chrome.storage.local.get(
+        {
+            api_key: '',
+            tags: 'cosmos,space',
+            logic: 'all'
+        },
+        function(settings) {
+            $.ajax({
+                url: "https://api.flickr.com/services/rest/",
+                data: { 
+                    api_key: settings.api_key,
+                    method: "flickr.photos.search",
+                    tags: settings.tags,
+                    tag_mode: settings.logic,
+                    privacy_filter: 1, // public photos only
+                    content_type: 1, // photos only
+                    media: "photos", // photos only
+                    per_page: 50,
+                    page: getRandom(100),
+                    extras: "description, date_taken, owner_name, geo, tags, url_o",
+                    format: "json",
+                    nojsoncallback: 1
+                },
+                dataType: "json",
+                success: parseResponse,
+                timeout: showAlert,
+                fail: showAlert,
+                error: showAlert
+            });
+        });
 });
 
