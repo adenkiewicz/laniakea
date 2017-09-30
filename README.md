@@ -17,4 +17,11 @@ Flickr API is required. Private API key can be requested on https://www.flickr.c
 
 ### Note
 
+The extension is not available through Google Web Store since they ask for $5 payment. I don't see a reason why would I need this. The extension can be installed from local directory or from one of the releases.
+
 This is more or less private project, feel free to propose improvements, fixes, etc. but I don't promise anything. Also, feel free to fork :)
+
+### Example pictures
+
+![New Tab](/demo/laniakea-new-tab.png?raw=true)
+![Settings](/demo/laniakea-settings.png?raw=true)
